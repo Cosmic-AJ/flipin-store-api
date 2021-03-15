@@ -1,0 +1,119 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "95d28dafc9146181b53cc82d2bf87ab6",
+    "packages": [
+        {
+            "name": "firebase/php-jwt",
+            "version": "v5.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/firebase/php-jwt.git",
+                "reference": "f42c9110abe98dd6cfe9053c49bc86acc70b2d23"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/firebase/php-jwt/zipball/f42c9110abe98dd6cfe9053c49bc86acc70b2d23",
+                "reference": "f42c9110abe98dd6cfe9053c49bc86acc70b2d23",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": ">=4.8 <=9"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Firebase\\JWT\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Neuman Vong",
+                    "email": "neuman+pear@twilio.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Anant Narayanan",
+                    "email": "anant@php.net",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A simple library to encode and decode JSON Web Tokens (JWT) in PHP. Should conform to the current spec.",
+            "homepage": "https://github.com/firebase/php-jwt",
+            "keywords": [
+                "jwt",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/firebase/php-jwt/issues",
+                "source": "https://github.com/firebase/php-jwt/tree/v5.2.1"
+            },
+            "time": "2021-02-12T00:02:00+00:00"
+        }
+    ],
+    "packages-dev": [
+        {
+            "name": "heroku/heroku-buildpack-php",
+            "version": "v190",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/heroku/heroku-buildpack-php.git",
+                "reference": "3e49045a63ed480378c9d3d3e364acbfcc06eb3f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/heroku/heroku-buildpack-php/zipball/3e49045a63ed480378c9d3d3e364acbfcc06eb3f",
+                "reference": "3e49045a63ed480378c9d3d3e364acbfcc06eb3f",
+                "shasum": ""
+            },
+            "bin": [
+                "bin/heroku-php-apache2",
+                "bin/heroku-php-nginx"
+            ],
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Zuelke",
+                    "email": "dz@heroku.com"
+                }
+            ],
+            "description": "Toolkit for starting a PHP application locally, with or without foreman, using the same config for PHP and Apache2/Nginx as on Heroku",
+            "homepage": "https://github.com/heroku/heroku-buildpack-php",
+            "keywords": [
+                "apache",
+                "apache2",
+                "foreman",
+                "heroku",
+                "nginx",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/heroku/heroku-buildpack-php/issues",
+                "source": "https://github.com/heroku/heroku-buildpack-php/tree/v190"
+            },
+            "time": "2021-03-04T23:15:04+00:00"
+        }
+    ],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.0.0"
+}
