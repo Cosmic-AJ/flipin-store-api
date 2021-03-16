@@ -8,7 +8,7 @@ include ('config/db.php');
 header("HTTP/1.1 200 OK");
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
-header('Access-Control-Allow-Methods: POST, GET, OPTIONS, PUT, DELETE');
+header('Access-Control-Allow-Methods: POST');
 header('Access-Control-Allow-Headers: Origin, Content-Type, Accept, Authorization, X-Request-With');
 
 $data = json_decode(file_get_contents('php://input'), true);
@@ -17,68 +17,89 @@ $data = json_decode(file_get_contents('php://input'), true);
 $email = pg_escape_string($data['email']);
 $pwd = md5(pg_escape_string($data['password']));
 
-$search = "SELECT password from Account where email='$email';";
-$squery = pg_query($pdo, $search);
-$nbud = pg_fetch_row($squery);
-$loginpwd = $nbud[0];
-
-if($loginpwd!=NULL)
+if($email=="" || $email==" "|| !(filter_var($email, FILTER_VALIDATE_EMAIL)))
 {
-    if(!strcmp($pwd,$loginpwd))
-    {
-        /* link to home page */
-        $search = "SELECT * from Account where email='$email';";
-        $squery = pg_query($pdo, $search);
-        $nbud = pg_fetch_row($squery);
-        //$nbud = array("Response Code"=>200, "Value"=>array("ID"=>$nbud[0], "Name"=>$nbud[1], "Email"=>$nbud[2], "Password"=>$nbud[3], "Phone Number"=>$nbud[4]));
-        //$value = json_encode($nbud);
-        //echo $value;
-        $secret_key = "FC07";
-        $issuer_claim = "https://flipin-store-api.herokuapp.com/"; // this can be the servername
-        //$audience_claim = "THE_AUDIENCE";
-        $issuedat_claim = time(); // issued at
-        //$notbefore_claim = $issuedat_claim + 10; //not before in seconds
-        $expire_claim = $issuedat_claim + 3600; // expire time in seconds
-        $token = array(
-            "iss" => $issuer_claim,
-            //"aud" => $audience_claim,
-            "iat" => $issuedat_claim,
-            //"nbf" => $notbefore_claim,
-            "exp" => $expire_claim,
-            "data" => array(
-                "Id" => $nbud[0],
-                "Name" => $nbud[1],
-                "Email" => $nbud[2],
-                "PhoneNumber" => $nbud[4],
-        ));
-
-        http_response_code(200);
-        $jwt = JWT::encode($token, $secret_key);
-        echo json_encode(
-            array(
-                "Response Code"=>200,
-                "Value"=>array("Message" => "Successful login.",
-                    "jwt" => $jwt,
-                    "Id" => $nbud[0],
-                    "Name" => $nbud[1],
-                    "Email" => $nbud[2],
-                    "PhoneNumber" => $nbud[4],
-                    "expireAt" => $expire_claim)
-            ));
-    }
-    else
-    {
-     /* link to login page */
-      $nbud = array("Response Code"=>422, "Value"=>array("Error"=>"Invalid Password"));
-      $value = json_encode($nbud);
-      echo("$value");
-    }
+    $nbud = array("responseCode"=>422, "error"=>"Invalid Email");
+    $value = json_encode($nbud);
+    echo("$value");
+}
+else if($data['password']=="" || $data['password']==" ")
+{
+    $nbud = array("responseCode"=>422, "error"=>"Invalid Password");
+    $value = json_encode($nbud);
+    echo("$value");
 }
 else
 {
- /* link to login page */
-  $nbud = array("Response Code"=>422, "Value"=>array("Error"=>"Invalid Login ID"));
-  $value = json_encode($nbud);
-  echo("$value");
+    $search1 = "SELECT * from Seller where email='$email';";
+    $squery1 = pg_query($pdo, $search1);
+    $nbudco1 = pg_num_rows($squery1);
+    $nbud1 = pg_fetch_row($squery1);
+    
+    $search2 = "SELECT * from Customer where email='$email';";
+    $squery2 = pg_query($pdo, $search2);
+    $nbudco2 = pg_num_rows($squery2);
+    $nbud2 = pg_fetch_row($squery2);
+    
+    if($nbudco1==1){
+        $nbud=$nbud1;
+        $id = "S".$nbud[0];
+        $isSeller = true;
+        $loginpwd = $nbud[4];
+    }
+    else if($nbudco2==1){
+        $nbud=$nbud2;
+        $id = "C".$nbud[0];
+        $isSeller = false;
+        $loginpwd = $nbud[4];
+    }else{
+        $loginpwd = NULL;
+    }
+
+    if($loginpwd!=NULL)
+    {
+        if(!strcmp($pwd,$loginpwd))
+        {
+            /* link to home page */
+            $secret_key = "AY05AS00YL31AC00";
+            $issuer_claim = "https://flipin-store-api.herokuapp.com/";
+            $issuedat_claim = time(); 
+            $expire_claim = $issuedat_claim + 2592000; // expire time in seconds
+            $token = array(
+                "iss" => $issuer_claim,
+                "iat" => $issuedat_claim,
+                "exp" => $expire_claim,
+                "data" => array(
+                    "id" => $nbud[0],
+                    "email" => $nbud[3],
+                ));
+                
+            $jwt = JWT::encode($token, $secret_key);
+
+            echo json_encode(
+                array(
+                    "Response Code"=>201,
+                    "jwt" => $jwt,
+                    "user"=> array("id" => $id,
+                        "isSeller" => $isSeller,
+                        "name" => $nbud[1],
+                        "email" => $nbud[3])
+                    ));
+        }
+        else
+        {
+        /* link to login page */
+        $nbud = array("responseCode"=>422, "error"=>"Invalid Email or Password");
+        $value = json_encode($nbud);
+        echo("$value");
+        }
+    }
+    else
+    {
+    /* link to login page */
+    $nbud = array("responseCode"=>422, "error"=>"Invalid Email or Password");
+    $value = json_encode($nbud);
+    echo("$value");
+    }
 }
 ?>
