@@ -76,3 +76,15 @@ contact.php (POST):
       responseCode: int | string,
       message: successMessage || errorMessage
    }
+
+
+// save 201
+// response 200
+/* 
+    accessories
+    furniture
+    cosmetics
+    footwear
+    jewellery
+    clothing
+*/
