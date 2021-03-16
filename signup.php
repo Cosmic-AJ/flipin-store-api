@@ -52,14 +52,15 @@ else if(gettype($isSeller)!='boolean')
 }
 else
 {
-    if($isSeller)
-        $search = "SELECT * from Seller where email='$email';";
-    else
-        $search = "SELECT * from Customer where email='$email';";
+    $search = "SELECT * from Seller where email='$email';";
     $squery = pg_query($pdo, $search);
-    $nbud = pg_num_rows($squery);
+    $nbud1 = pg_num_rows($squery);
     
-    if($nbud==0){
+    $search = "SELECT * from Customer where email='$email';";
+    $squery = pg_query($pdo, $search);
+    $nbud2 = pg_num_rows($squery);
+    
+    if($nbud1==0 && $nbud2==0){
         if($isSeller)
             $search = "Insert into Seller(Name, PhoneNumber, Email, Password, PremiumMember) Values('$name','$phone','$email','$pwd','NO');";
         else
