@@ -11,7 +11,7 @@
          responseCode: int | string,
          jwt: string,
          user: {
-            id: int,
+            id: string,
             isSeller: boolean,
             name: string,
             email: string,
@@ -51,7 +51,9 @@ shop.php (GET):
             img: string,
             lowestBid: int,
             category: string,
-            location: {{that is derived from the address of the customer who created it}}
+            location: {{that is derived from the address of the customer who created it}},
+            Date: date (2011-10-05T14:48:00.000Z),
+            utc
          }
       ]
 
