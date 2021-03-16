@@ -37,7 +37,13 @@
 ***response: 
       {
          responseCode: int | string,
-         message: successMessage || errorMessage
+         jwt: string,
+         user: {
+            id: string,
+            isSeller: boolean,
+            name: string,
+            email: string,
+         }
       }
 
 
