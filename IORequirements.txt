@@ -1,0 +1,70 @@
+- login.php (POST): 
+***request: 
+   {
+      email: string,
+      password: string
+   }
+
+***response:
+   if responseCode is okay (200-299)
+      {
+         responseCode: int | string,
+         jwt: string,
+         user: {
+            id: int,
+            isSeller: boolean,
+            name: string,
+            email: string,
+         }
+      }
+   else 
+      {
+         responseCode: int | string,
+         error: string
+      }
+
+
+- signup.php (POST): 
+***request: 
+   {
+      isSeller: boolean,
+      name: string,
+      email: string,
+      phone: string,
+      password: string
+   }
+
+***response: 
+      {
+         responseCode: int | string,
+         message: successMessage || errorMessage
+      }
+
+
+shop.php (GET): 
+***response:
+//Array of objects
+      [
+         {
+            id: int || string,
+            name: string,
+            img: string,
+            lowestBid: int,
+            category: string,
+            location: {{that is derived from the address of the customer who created it}}
+         }
+      ]
+
+contact.php (POST): 
+***request: 
+   {
+      email: string,
+      message: string,
+      name: string
+   }
+
+***response: 
+   {
+      responseCode: int | string,
+      message: successMessage || errorMessage
+   }
