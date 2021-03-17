@@ -78,7 +78,7 @@ else
 
             echo json_encode(
                 array(
-                    "Response Code"=>201,
+                    "responseCode"=>200,
                     "jwt" => $jwt,
                     "user"=> array("id" => $id,
                         "isSeller" => $isSeller,
