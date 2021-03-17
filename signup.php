@@ -95,7 +95,7 @@ else
 
         echo json_encode(
             array(
-                "Response Code"=>201,
+                "responseCode"=>201,
                 "jwt" => $jwt,
                 "user"=> array("id" => $id,
                     "isSeller" => $isSeller,
