@@ -41,10 +41,10 @@ else
     $search = "Insert into Contact(Name, Email, Message) Values('$name','$email','$message');";
     $squery = pg_query($pdo, $search);
 
-    http_response_code(200);
+    http_response_code(201);
     echo json_encode(
         array(
-            "Response Code"=>200,
+            "responseCode"=>201,
             "message" => "successMessage"));
 }
 ?>
