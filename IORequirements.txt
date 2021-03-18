@@ -88,3 +88,72 @@ contact.php (POST):
     jewellery
     clothing
 */
+
+
+orders (protected) 
+
+***request
+auth header jwt
+
+***response 
+const data = {
+     summary: {
+       toc: 24,
+       tb: 24,
+       ab: 24,
+       ao: 24,
+       te: 24,
+     },
+     bids: [
+       {
+         id: "P1",
+         src: "",
+         pName: "Belt",
+         lBid: "500",
+         yBid: "600",
+         status: true,
+       },
+       {
+         id: "P2",
+         src: "",
+         pName: "Lipstick",
+         lBid: "400",
+         yBid: "800",
+         status: false,
+       },
+       {
+         id: "P3",
+         src: "",
+         pName: "B",
+         lBid: "500",
+         yBid: "600",
+         status: true,
+       },
+     ],
+     order: [
+       {
+         id: "P1",
+         src: "",
+         pName: "Belt",
+         lBid: "500",
+         yBid: "600",
+         status: true,
+       },
+       {
+         id: "P2",
+         src: "",
+         pName: "Lipstick",
+         lBid: "400",
+         yBid: "800",
+         status: false,
+       },
+       {
+         id: "P3",
+         src: "",
+         pName: "B",
+         lBid: "500",
+         yBid: "600",
+         status: true,
+       },
+     ],
+   };
