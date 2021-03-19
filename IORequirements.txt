@@ -15,6 +15,7 @@
             isSeller: boolean,
             name: string,
             email: string,
+            hasAddress: boolean
          }
       }
    else 
