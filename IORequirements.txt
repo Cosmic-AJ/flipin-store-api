@@ -107,55 +107,35 @@ const data = {
        te: 24,
      },
      bids: [
-       {
-         id: "P1",
-         src: "",
-         pName: "Belt",
-         lBid: "500",
-         yBid: "600",
-         status: true,
-       },
-       {
-         id: "P2",
-         src: "",
-         pName: "Lipstick",
-         lBid: "400",
-         yBid: "800",
-         status: false,
-       },
-       {
-         id: "P3",
-         src: "",
-         pName: "B",
-         lBid: "500",
-         yBid: "600",
-         status: true,
-       },
+       
+       {},
+       {},
      ],
-     order: [
-       {
-         id: "P1",
-         src: "",
-         pName: "Belt",
-         lBid: "500",
-         yBid: "600",
-         status: true,
-       },
-       {
-         id: "P2",
-         src: "",
-         pName: "Lipstick",
-         lBid: "400",
-         yBid: "800",
-         status: false,
-       },
-       {
-         id: "P3",
-         src: "",
-         pName: "B",
-         lBid: "500",
-         yBid: "600",
-         status: true,
-       },
-     ],
+     order: [],
    };
+   
+   
+   Dashboard 
+   ***Response
+   {
+   name: string,
+   src: null || url,
+   summary: [
+      {
+         item: "Total Bids",
+         value: amount
+      }, {}, {}
+   ],
+   e: ,
+   rating: ,
+   bids : [
+      {
+         id: "P1",
+         src: "",
+         pName: "Belt",
+         lBid: "500",
+         yBid: "600",
+         status: true,
+       }, 
+   ]
+}
