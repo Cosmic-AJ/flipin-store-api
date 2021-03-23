@@ -97,6 +97,7 @@ orders (protected)
 ***request
 auth header jwt
 
+
 ***response 
 const data = {
      summary: {
