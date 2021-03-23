@@ -25,7 +25,6 @@
       }
 
 
-
 - signup.php (POST): 
 ***request: 
    {
