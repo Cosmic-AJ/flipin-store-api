@@ -141,3 +141,25 @@ const data = {
        }, 
    ]
 }
+{
+   summary: [
+      {
+         item: "Total Products",
+         value: amount,
+         tviews,
+         onbids
+      }, {}, {}
+   ],
+   e: ,
+   rating: ,
+   bids : [
+      {
+         id: "P1",
+         src: "",
+         pName: "Belt",
+         lBid: "500",
+         nviews,
+         tbids
+       }, 
+   ]
+}
