@@ -159,7 +159,7 @@ const data = {
          pName: "Belt",
          lBid: "500",
          nviews: "",
-         tbids
+         tbids: ""
        }, 
    ]
 }
