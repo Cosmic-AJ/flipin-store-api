@@ -158,7 +158,7 @@ const data = {
          src: "",
          pName: "Belt",
          lBid: "500",
-         nviews,
+         nviews: "",
          tbids
        }, 
    ]
