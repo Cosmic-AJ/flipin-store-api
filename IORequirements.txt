@@ -34,7 +34,7 @@
       phone: string,
       password: string
    }
-
+ 
 ***response: 
       {
          responseCode: int | string,
