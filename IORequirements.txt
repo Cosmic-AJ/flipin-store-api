@@ -25,7 +25,6 @@
          error: string
       }
 
-
 - signup.php (POST): 
 ***request: 
    {
