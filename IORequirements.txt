@@ -165,8 +165,8 @@ const data = {
 
 
 
-SetProfile
-***request
+setprofile.php (POST):
+***request:
 auth header jwt
 {
     //Seller
@@ -181,6 +181,7 @@ auth header jwt
     "country": "India",
     "pincode": "302017"
 }
+||
 {
     //Customer
     "phoneNumber": "9999955555",
@@ -192,12 +193,16 @@ auth header jwt
     "pincode": "302017"
 }
 
-***response
+
+***response:
 {
+    //successful
     "responseCode": 204,
     "message": "Profile Updated Successfully."
 }
+||
 {
+    //error
     "responseCode": 422,
     "error": "Invalid Pincode"
 }
