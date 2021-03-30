@@ -1,4 +1,4 @@
-- login.php (POST): 
+login.php (POST): 
 ***request: 
    {
       email: string,
