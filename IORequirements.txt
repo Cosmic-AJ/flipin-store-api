@@ -164,6 +164,49 @@ const data = {
 }
 
 
+getprofile.php (GET): 
+
+***request
+auth header jwt
+
+
+***response
+{
+    //Seller
+    "responseCode": 200,
+    "user": {
+        "name": "Ayush",
+        "phoneNumber": "9999955555",
+        "email": "c@gmail.com",
+        "premiumMember": "NO",
+        "category": "Jewellery",
+        "logo": "https://www.publicdomainpictures.net/pictures/70000/nahled/letter-a-1388715703B97.jpg",
+        "firstLineAddress": "14",
+        "secondLineAddress": "Nagar",
+        "city": "Jaipur",
+        "state": "Rajasthan",
+        "country": "India",
+        "pincode": "302017"
+    }
+}
+||
+{
+    //Customer
+    "responseCode": 200,
+    "user": {
+        "name": "Ayush",
+        "phoneNumber": "9876543210",
+        "email": "a@gmail.com",
+        "firstLineAddress": "14",
+        "secondLineAddress": "Nagar",
+        "city": "Jaipur",
+        "state": "Rajasthan",
+        "country": "India",
+        "pincode": "302017"
+    }
+}
+
+
 
 setprofile.php (POST):
 ***request:
