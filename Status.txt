@@ -3,7 +3,7 @@ SignUp
 Contact
 login
 Shop
-
-Modify (Provide more validation):
 Dashboard
+
+To do:
 Order
