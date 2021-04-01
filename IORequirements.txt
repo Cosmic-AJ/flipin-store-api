@@ -19,7 +19,7 @@ login.php (POST):
          }
        
       }
-   else 
+   else
       {
          responseCode: int | string,
          error: string
