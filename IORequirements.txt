@@ -17,7 +17,6 @@ login.php (POST):
             email: string,
             hasAddress: boolean
          }
-       
       }
    else
       {
