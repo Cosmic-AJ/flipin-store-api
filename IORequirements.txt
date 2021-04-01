@@ -237,7 +237,7 @@ auth header jwt
     "pincode": "302017"
 }
 
-
+ 
 ***response:
 {
     //successful
