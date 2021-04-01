@@ -249,3 +249,29 @@ auth header jwt
     "responseCode": 422,
     "error": "Invalid Pincode"
 }
+
+
+
+productpost.php (POST):
+***request:
+auth header jwt
+{
+    "name":"Chokar",
+    "description":"It is a Chokar",
+    "category":"Jewellery",
+    "mediaUrl":"https://5.imimg.com/data5/AR/OC/NN/ANDROID-22678777/product-jpeg-500x500.jpeg"
+}
+
+
+***response:
+{
+    //successful
+    "responseCode": 201,
+    "message": "Product Added Successfully."
+}
+||
+{
+    //error
+    "responseCode": 422,
+    "error": "Invalid Name"
+}
