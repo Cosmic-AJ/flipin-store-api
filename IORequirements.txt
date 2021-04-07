@@ -340,12 +340,22 @@ getProduct.php
       ]
    }
    
-   EDIT OR POST BID 
-   ***Request body
+bid.php (POST):
+***request:
+auth header JWT
 {
-      "edit": boolean,
-      "price": int,
-      "desc": string
+    "pid":"P17",
+    "desc":"New bid",
+    "price": "1000"
 }
-   ***response 
-   code and message
+
+***response: 
+{
+    "responseCode": 201,
+    "message": "Bid Added Successfully"
+}
+||
+{
+    "responseCode": 204,
+    "message": "Bid Updated Successfully"
+}
