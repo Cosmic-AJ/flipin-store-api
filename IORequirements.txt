@@ -340,7 +340,6 @@ getProduct.php
       ]
    }
    
-   
    EDIT OR POST BID 
    ***Request body
    {
