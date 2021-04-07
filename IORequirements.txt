@@ -342,10 +342,10 @@ getProduct.php
    
    EDIT OR POST BID 
    ***Request body
-   {
+{
       "edit": boolean,
       "price": int,
       "desc": string
-   }
+}
    ***response 
    code and message
