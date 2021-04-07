@@ -277,69 +277,109 @@ auth header jwt
 }
 
 
-getProduct.php 
-***request with JWt and 
+getproduct.php (POST):
+***request
+auth header jwt 
 {
    "id": "P1"
 }
 
-***response
-
+***response:
 {
-      name: "Black Belt Ring",
-      lowestBid: 1500,
-      location: "Koramangala, Bangalore",
-      category: "Jewellery",
-      description: "Lorem ipsum dolor sit am elit, sed do eiusmod tempor incididunt ut labore et dolor",
-      customerId: "C1",
-      image: "https://images-na.ssl-images-amazon.com/images/I/61Alt8-UTnL._UL1500_.jpg",
-      bids: [
-         {
-            sellerId: "B1",
-            logo: "https://www.publicdomainpictures.net/pictures/70000/nahled/letter-a-1388715703B97.jpg",
-            sellerName: "Ayush",
-            description: "Lorem ipsum do eiusmod ..... more",
-            amount: "1100",
-         },
-         {
-            sellerId: "B2",
-            logo: null,
-            sellerName: "Sri",
-            description: "Lorem ipsum dolor sit ad ..... more",
-            amount: "1100",
-         },
-         {
-            sellerId: "S1",
-            logo: "",
-            sellerName: "Venkatesha Enterprises",
-            description: "Lorem ipsum dolor sit am ..... more",
-            amount: "1100",
-         },
-      ],
-      suggestions: [
-         {
-            id:"P53",
-            name:"Glasses",
-            img:"https://images-na.ssl-images-amazon.com/images/I/313KvOFWUzL.jpg",
-            lowestBid:"Not Available",
-            location:"Jaipur, Rajasthan"
-         },
-         {
-            id:"P54",
-            name:"Glasses",
-            img:"https://images-na.ssl-images-amazon.com/images/I/313KvOFWUzL.jpg",
-            lowestBid:"Not Available",
-            location:"Jaipur, Rajasthan"
-         },{
-            id:"P56",
-            name:"Glasses",
-            img:"https://images-na.ssl-images-amazon.com/images/I/313KvOFWUzL.jpg",
-            lowestBid:"Not Available",
-            location:"Jaipur, Rajasthan"
-         },
-      ]
-   }
-   
+    //for seller
+    "responseCode": 200,
+    "name": "Belt",
+    "lowestBid": "500",
+    "location": "Jaipur, Rajasthan",
+    "category": "Accessories",
+    "description": "It is a belt",
+    "customerId": "1",
+    "image": "https://staticimg.titan.co.in/Titan/Catalog/TB184LM1R2_1.jpg",
+    "bids": [
+        {
+            "sellerId": "S1",
+            "logo": "https://www.publicdomainpictures.net/pictures/70000/nahled/letter-a-1388715703B97.jpg",
+            "sellerName": "Ayush",
+            "description": "Price quoted",
+            "amount": "2500"
+        },
+        {
+            "sellerId": "S2",
+            "logo": null,
+            "sellerName": "Ayush Jain",
+            "description": "Price quoted",
+            "amount": "2000"
+        },
+        {
+            "sellerId": "S35",
+            "logo": null,
+            "sellerName": "Ayush Jain",
+            "description": "Price quoted",
+            "amount": "500"
+        }
+    ],
+    "suggestions": [
+        {
+            "id": "P3",
+            "name": "Tie",
+            "img": "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1559339960-TIE-4836-0026.jpg",
+            "lowestBid": "200",
+            "location": "Jaipur, Rajasthan"
+        },
+        {
+            "id": "P53",
+            "name": "Glasses",
+            "img": "https://images-na.ssl-images-amazon.com/images/I/313KvOFWUzL.jpg",
+            "lowestBid": "Not Available",
+            "location": "Jaipur, Rajasthan"
+        },
+        {
+            "id": "P51",
+            "name": "Watch",
+            "img": "https://i.gadgets360cdn.com/products/large/realme-watch-670x800-1590388807.jpg",
+            "lowestBid": "3500",
+            "location": "Jaipur, Rajasthan"
+        }
+    ]
+}
+||
+{
+    //for customer
+    "responseCode": 200,
+    "name": "Belt",
+    "lowestBid": "500",
+    "location": "Jaipur, Rajasthan",
+    "category": "Accessories",
+    "description": "It is a belt",
+    "customerId": "1",
+    "image": "https://staticimg.titan.co.in/Titan/Catalog/TB184LM1R2_1.jpg",
+    "bids": [
+        {
+            "sellerId": "S1",
+            "logo": "https://www.publicdomainpictures.net/pictures/70000/nahled/letter-a-1388715703B97.jpg",
+            "sellerName": "Ayush",
+            "description": "Price quoted",
+            "amount": "2500"
+        },
+        {
+            "sellerId": "S2",
+            "logo": null,
+            "sellerName": "Ayush Jain",
+            "description": "Price quoted",
+            "amount": "2000"
+        },
+        {
+            "sellerId": "S35",
+            "logo": null,
+            "sellerName": "Ayush Jain",
+            "description": "Price quoted",
+            "amount": "500"
+        }
+    ]
+}
+
+
+
 bid.php (POST):
 ***request:
 auth header JWT
