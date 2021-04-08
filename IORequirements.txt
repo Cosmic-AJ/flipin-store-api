@@ -99,21 +99,6 @@ auth header jwt
 
 
 ***response 
-const data = {
-     summary: {
-       toc: 24,
-       tb: 24,
-       ab: 24,
-       ao: 24,
-       te: 24,
-     },
-     bids: [
-       {},
-       {},
-     ],
-     order: [],
-   };
-   
  
    Dashboard 
    ***Response
@@ -140,28 +125,96 @@ const data = {
    ]
 }
 
+
+
+order.php (GET): 
+
+***request
+auth header jwt
+
+***response
 {
-   summary: [
-      {
-         item: "Total Products",
-         value: amount,
-         tviews,
-         onbids
-      }, {}, {}
-   ],
-   e: ,
-   rating: ,
-   bids : [
-      {
-         id: "P1",
-         src: "",
-         pName: "Belt",
-         lBid: "500",
-         nviews: "",
-         tbids: ""
-       }, 
-   ]
+    //for seller
+    "responseCode": 200,
+    "summary": {
+        "s1": {
+            "key": "Total Orders Completed",
+            "value": 1
+        },
+        "s2": {
+            "key": "Total Bids",
+            "value": 16
+        },
+        "s3": {
+            "key": "Active Bids",
+            "value": 14
+        },
+        "s4": {
+            "key": "Active Orders",
+            "value": 1
+        },
+        "s5": {
+            "key": "Total Earnings",
+            "value": "400"
+        }
+    },
+    "orders": [
+        {
+            "oid": "O1",
+            "src": null,
+            "name": "Ayush",
+            "productName": "Watch",
+            "price": "3500",
+            "status": "SHIPPED"
+        },
+        {
+            "oid": "O2",
+            "src": null,
+            "name": "Ayush",
+            "productName": "Hat",
+            "price": "400",
+            "status": "COMPLETE"
+        }
+    ]
 }
+||
+{
+    //for customer
+    "responseCode": 200,
+    "summary": {
+        "s1": {
+            "key": "Total Products Fulfilled",
+            "value": 1
+        },
+        "s2": {
+            "key": "Total Bids",
+            "value": 8
+        },
+        "s3": {
+            "key": "Active Listings",
+            "value": 8
+        },
+        "s4": {
+            "key": "Active Orders",
+            "value": 0
+        },
+        "s5": {
+            "key": "Total Expenditure",
+            "value": "400"
+        }
+    },
+    "orders": [
+        {
+            "oid": "O2",
+            "src": "https://res.cloudinary.com/flipin/image/upload/v1617898404/gsngqhlc7wdqvznz2ngq.png",
+            "name": "Ayush",
+            "productName": "Hat",
+            "price": "400",
+            "status": "COMPLETE"
+        }
+    ]
+}
+
 
 
 getprofile.php (GET): 
@@ -425,21 +478,3 @@ auth header jwt
     "responseCode": 422,
     "error": "Invalid Name"
 }
-
-
-"summary": {
-        "s1": {
-            "key": "Total Product Listing",
-            "value": 9
-        },
-        "s2": {
-            "key": "Total Views",
-            "value": "90"
-        },
-        "s3": {
-            "key": "Ongoing Bids",
-            "value": 10
-        }
-    },
-    "e": 0,
-    "rating": 5,
