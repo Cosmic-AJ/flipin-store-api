@@ -425,3 +425,21 @@ auth header jwt
     "responseCode": 422,
     "error": "Invalid Name"
 }
+
+
+"summary": {
+        "s1": {
+            "key": "Total Product Listing",
+            "value": 9
+        },
+        "s2": {
+            "key": "Total Views",
+            "value": "90"
+        },
+        "s3": {
+            "key": "Ongoing Bids",
+            "value": 10
+        }
+    },
+    "e": 0,
+    "rating": 5,
