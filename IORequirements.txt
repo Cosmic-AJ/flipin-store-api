@@ -399,3 +399,29 @@ auth header JWT
     "responseCode": 204,
     "message": "Bid Updated Successfully"
 }
+
+
+
+editproduct.php (POST):
+***request:
+auth header jwt
+{
+    "pid": "P55",
+    "name":"Chokar",
+    "description":"It is a Chokar",
+    "category":"Jewellery",
+    "mediaUrl":"https://5.imimg.com/data5/AR/OC/NN/ANDROID-22678777/product-jpeg-500x500.jpeg"
+}
+
+
+***response:
+{
+    "responseCode": 204,
+    "message": "Product Updated Successfully"
+}
+||
+{
+    //error
+    "responseCode": 422,
+    "error": "Invalid Name"
+}
