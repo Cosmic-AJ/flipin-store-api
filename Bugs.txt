@@ -14,14 +14,25 @@ General:
 
 Page Specific:
 1. Orders page
-      heads should be all orders and active orders and viewing panel is not getting changed as per the selection.
+      Heads should be all orders and active orders and viewing panel is not getting changed as per the selection.
 2. Profile page 
-      alignment of "Personal Profule" text should be in center
+      Alignment of "Personal Profule" text should be in center
+      Regular and Premium Button Size should be increased
+      Submit button should tell the user that something is sent to the server, may be in form of loading symbol
+      Edit profile not working for seller
 3. Browse page 
-      in the sort option, extra space need to be removed.
+      In the sort option, extra space need to be removed.
 4. Contact Us Page
       Submit button needs to be aligned
+      User should be told that request has been submitted and then the data should be cleared
+      Disable the resize property of text area
 5. Index page
       Images and content to be added
 6. About Us page
       Photos and content to be added
+7. Product Page
+      When seller is editing a bid just after the addition of bid, it is getting added into the below panel, which should not be added their. It is happening only when the page    for add bid is working.
+      Page should be loaded to stop the add bid functionality.
+      Suggested bid should not overflow
+ 8. Product Post Page:
+      It should be told to the user that the product is getting added, a loading operation can be added
