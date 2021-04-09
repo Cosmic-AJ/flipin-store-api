@@ -1,9 +1,0 @@
-Full Complete:
-SignUp
-Contact
-login
-Shop
-Dashboard
-
-To do:
-Order

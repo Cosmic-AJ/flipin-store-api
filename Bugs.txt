@@ -1,0 +1,10 @@
+Bugs to be solved:
+
+1. Submit button on Contact us form
+2. Images and content on index page
+3. Content and photo on about us page
+4. Footer needs to be modified
+5. Seller needs to be restricted to bid on viewing products and placing bids according to their categories
+6. View products page need to be added for customer
+7. Printing of values need to be stopped in the Console
+8. 
