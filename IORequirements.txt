@@ -478,3 +478,45 @@ auth header jwt
     "responseCode": 422,
     "error": "Invalid Name"
 }
+
+
+
+
+listings.php (GET):
+***request:
+auth header jwt
+
+
+***response:
+{
+    "responseCode": 200,
+    "products": [
+        {
+            "id": "P6",
+            "name": "Sofa",
+            "img": "https://images-na.ssl-images-amazon.com/images/I/7173g5rSwAL._SX425_.jpg",
+            "lowestBid": "2500",
+            "category": "Furniture",
+            "location": "Jaipur, Karnataka",
+            "Date": "2021-03-18T00:29:09+00:00"
+        },
+        {
+            "id": "P5",
+            "name": "Table",
+            "img": "https://www.ikea.com/in/en/images/products/ekedalen-extendable-table-dark-brown__0736963_pe740827_s5.jpg",
+            "lowestBid": "800",
+            "category": "Furniture",
+            "location": "Jaipur, Karnataka",
+            "Date": "2021-03-18T00:28:18+00:00"
+        },
+        {
+            "id": "P4",
+            "name": "Chair",
+            "img": "https://ii1.pepperfry.com/media/catalog/product/m/u/568x625/multicolour-patch-iconic-chair-by-star-india-multicolour-patch-iconic-chair-by-star-india-iwybi2.jpg",
+            "lowestBid": "1000",
+            "category": "Furniture",
+            "location": "Jaipur, Karnataka",
+            "Date": "2021-03-18T00:27:32+00:00"
+        }
+    ]
+}
