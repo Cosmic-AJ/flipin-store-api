@@ -23,7 +23,7 @@ $pwd = md5(pg_escape_string($data['password']));
 if($name=="" || $name==" " || !(preg_match('/^[a-zA-Z ]*$/', $name)))
 {
     $nbud = array("responseCode"=>422, "error"=>"Invalid Name");
-    $value = json_encode($nbud);
+    $value = json_encode($nbud)
     echo("$value");
 }
 else if($email=="" || $email==" "|| !(filter_var($email, FILTER_VALIDATE_EMAIL)))
