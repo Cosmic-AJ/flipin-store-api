@@ -1,7 +1,7 @@
 <?php
 session_start();
 require "vendor/autoload.php";
-use \Firebase\JWT\JWT;
+use \Firebase\JWT\JWT
 
 include ('config/db.php');
 
