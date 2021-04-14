@@ -3,7 +3,7 @@ session_start();
 require "vendor/autoload.php";
 use \Firebase\JWT\JWT;
 
-include ('config/db.php');
+include ('config/db.php');. 
 
 header("HTTP/1.1 200 OK");
 header("Access-Control-Allow-Origin: *");
