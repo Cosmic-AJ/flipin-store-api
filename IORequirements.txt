@@ -520,3 +520,45 @@ auth header jwt
         }
     ]
 }
+
+
+
+getorderdetails.php (POST):
+***request:
+auth header jwt
+{
+    "oid":"O2"
+}
+
+
+***response:
+{
+    // for customer
+    "responseCode": 200,
+    "name": "Watch",
+    "mediaUrl": "https://staticimg.titan.co.in/Titan/Catalog/1595NL03_2.jpg",
+    "price": "3500",
+    "status": "SHIPPED",
+    "location": "Jaipuriya, Rajasthan",
+    "personType": "Seller Name",
+    "personName": "Yashika",
+    "description": "It is a watch"
+}
+||
+{
+    // for seller
+    "responseCode": 200,
+    "name": "Watch",
+    "mediaUrl": "https://staticimg.titan.co.in/Titan/Catalog/1595NL03_2.jpg",
+    "price": "3500",
+    "status": "SHIPPED",
+    "location": "Jaipuriya, Rajasthan",
+    "personType": "Customer Name",
+    "personName": "Ayush",
+    "description": "It is a watch"
+}
+||
+{
+    "responseCode": 403,
+    "message": "Access denied."
+}
