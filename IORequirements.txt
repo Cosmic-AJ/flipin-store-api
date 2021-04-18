@@ -562,4 +562,56 @@ auth header jwt
     "responseCode": 403,
     "message": "Access denied."
 }
-accept, unpublish, billing
+
+
+
+acceptorder.php (POST):
+***request:
+auth header jwt
+{
+    "pid":"P15",
+    "sid":"S2"
+}
+
+
+***response:
+{
+    "responseCode": 201,
+    "message": "Order Created Successfully"
+}
+||
+{
+    "responseCode": 400,
+    "message": "Order already created or product set as Unpublished."
+}
+||
+{
+    "responseCode": 403,
+    "message": "Access denied."
+}
+
+
+
+publish.php (POST):
+***request:
+auth header jwt
+{
+    "pid":"P15"
+}
+
+
+***response:
+{
+    "responseCode": 204,
+    "message": "Product Unpublished Successfully"
+}
+||
+{
+    "responseCode": 204,
+    "message": "Product Published Successfully"
+}
+||
+{
+    "responseCode": 403,
+    "message": "Access denied."
+}
