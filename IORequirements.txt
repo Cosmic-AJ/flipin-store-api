@@ -615,3 +615,49 @@ auth header jwt
     "responseCode": 403,
     "message": "Access denied."
 }
+
+
+
+billing.php (POST):
+***request:
+auth header jwt
+{
+    "oid":"O1"
+}
+
+
+***response:
+{
+    //same response for both customer and seller
+    "responseCode": 200,
+    "productName": "Watch",
+    "quantity": 1,
+    "price": "3500",
+    "commission": "5%",
+    "commissionAmount": 175,
+    "totalPrice": 3675,
+    "date": "2021-03-25",
+    "Customer": {
+        "name": "Ayush",
+        "firstLineAddress": "14",
+        "secondLineAddress": "Nagar",
+        "city": "Jaipuriya",
+        "state": "Rajasthan",
+        "country": "India",
+        "pincode": "302017"
+    },
+    "Seller": {
+        "name": "Yashika",
+        "firstLineAddress": "14",
+        "secondLineAddress": "Palya",
+        "city": "Jaipur",
+        "state": "Kerela",
+        "country": "India",
+        "pincode": "302018"
+    }
+}
+||
+{
+    "responseCode": 403,
+    "message": "Access denied."
+}
