@@ -628,7 +628,6 @@ auth header jwt
 
 ***response:
 {
-    //same response for both customer and seller
     "responseCode": 200,
     "productName": "Watch",
     "quantity": 1,
@@ -636,7 +635,11 @@ auth header jwt
     "commission": "5%",
     "commissionAmount": 175,
     "totalPrice": 3675,
-    "date": "2021-03-25",
+    "date": {
+        "day": "25",
+        "month": "March",
+        "year": "2021"
+    },
     "Customer": {
         "name": "Ayush",
         "firstLineAddress": "14",
