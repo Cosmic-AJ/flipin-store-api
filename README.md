@@ -1,7 +1,7 @@
 Bugs to be solved:
 
-##Major Bug and Error:
-##After signup, user provides the address but isn't able to move to other pages.
+#Major Bug and Error:
+#After signup, user provides the address but isn't able to move to other pages.
 
 
 General:
