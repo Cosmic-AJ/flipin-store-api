@@ -1,10 +1,5 @@
 Bugs to be solved:
 
-# Major Bug and Error:
-
-# After signup, user provides the address but isn't able to move to other pages.
-
-
 General:
 1. Footer needs to be modified
 2. Seller needs to be restricted to bid on viewing products and placing bids according to their categories
@@ -31,4 +26,4 @@ remove categories for seller in footer
 page for rendering products as per category (backend)
 edit order status and delivery date
 show bill, add invoice thing in the right side of product name
-router solution
+Need to add some design to show to the new user that no products has been added yet.
