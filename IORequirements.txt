@@ -23,7 +23,7 @@ login.php (POST):
          responseCode: int | string,
          error: string
       }
- 
+
 signup.php (POST): 
 ***request: 
    {
