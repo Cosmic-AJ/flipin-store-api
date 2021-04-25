@@ -6,7 +6,6 @@ General:
 3. Browse page need to be added for customer
 4. Printing of values need to be stopped in the Console
 5. After login and signup it is loading dashboard page and getting corrupted because of page not found error.
-6. Seller should be allowed to change ctaegory once a month only  (backend)
 
 Page Specific:
 1. Profile page 
