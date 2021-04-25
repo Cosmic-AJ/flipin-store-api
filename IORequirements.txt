@@ -665,3 +665,77 @@ auth header jwt
     "responseCode": 403,
     "message": "Access denied."
 }
+
+
+
+product.php (POST):
+***request:
+{
+    "category" : "Accessories" || "Clothing" || "Footwear" || "Jewellery" || "Cosmetics" || "Furniture"
+}
+
+***response:
+{
+    "responseCode": 200,
+    "productItems": [
+        {
+            "id": "P64",
+            "name": "Test",
+            "img": "https://res.cloudinary.com/flipin/image/upload/v1619113010/kxadpb0cjfdlu1bif4e1.jpg",
+            "lowestBid": "Not Available",
+            "category": "Accessories",
+            "location": "Jai, Karnataka",
+            "Date": "2021-04-22T23:06:52+00:00"
+        },
+        {
+            "id": "P63",
+            "name": "Test",
+            "img": "https://res.cloudinary.com/flipin/image/upload/v1619112837/h89qt8yjrsf9jgw3mtrb.jpg",
+            "lowestBid": "Not Available",
+            "category": "Accessories",
+            "location": "Jai, Karnataka",
+            "Date": "2021-04-22T23:04:15+00:00"
+        },
+        {
+            "id": "P53",
+            "name": "Glasses",
+            "img": "https://images-na.ssl-images-amazon.com/images/I/313KvOFWUzL.jpg",
+            "lowestBid": "1500",
+            "category": "Accessories",
+            "location": "Jaipuriya, Rajasthan",
+            "Date": "2021-03-25T18:26:57+00:00"
+        },
+        {
+            "id": "P3",
+            "name": "Tie",
+            "img": "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1559339960-TIE-4836-0026.jpg",
+            "lowestBid": "200",
+            "category": "Accessories",
+            "location": "Jaipuriya, Rajasthan",
+            "Date": "2021-03-18T00:25:31+00:00"
+        },
+        {
+            "id": "P2",
+            "name": "Wallet",
+            "img": "https://5.imimg.com/data5/TT/RC/MY-71045813/leather-purse-500x500.jpg",
+            "lowestBid": "3000",
+            "category": "Accessories",
+            "location": "Jaipuriya, Rajasthan",
+            "Date": "2021-03-18T00:24:34+00:00"
+        },
+        {
+            "id": "P1",
+            "name": "Belt",
+            "img": "https://staticimg.titan.co.in/Titan/Catalog/TB184LM1R2_1.jpg",
+            "lowestBid": "400",
+            "category": "Accessories",
+            "location": "Jaipuriya, Rajasthan",
+            "Date": "2021-03-18T00:23:36+00:00"
+        }
+    ]
+}
+||
+{
+    "responseCode": 404,
+    "message": "Page Not found"
+}
