@@ -739,3 +739,31 @@ product.php (POST):
     "responseCode": 404,
     "message": "Page Not found"
 }
+
+
+
+editorder.php (POST):
+***request:
+auth header jwt
+{
+    "oid":"O1",
+    "status":"SHIPPED",
+    "dateDelivery":"2021-05-10"
+}
+
+
+***response:
+{
+    "responseCode": 204,
+    "message": "Order Updated Successfully"
+}
+||
+{
+    "responseCode": 422,
+    "message": "Order doesn't exist"
+}
+||
+{
+    "responseCode": 403,
+    "message": "Access denied."
+}
