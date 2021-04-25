@@ -2,7 +2,7 @@ login.php (POST):
 ***request: 
    {
       email: string,
-      password: string
+      password: string 
  }
 
 ***response:
