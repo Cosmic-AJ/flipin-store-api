@@ -747,7 +747,7 @@ editorder.php (POST):
 auth header jwt
 {
     "oid":"O1",
-    "status":"SHIPPED",
+    "status": "STARTED" || "PACKED" || "SHIPPED" || "OUT FOR DELIVERY" || "COMPLETE",
     "dateDelivery":"2021-05-10"
 }
 
