@@ -93,41 +93,6 @@ contact.php (POST):
 */
 
 
-orders (protected) 
-
-***request
-auth header jwt
-
-
-***response 
- 
-   Dashboard 
-   ***Response
-   {
-   name: string,
-   src: null || url,
-   summary: [
-      {
-         item: "Total Bids",
-         value: amount
-      }, {}, {}
-   ],
-   e: ,
-   rating: ,
-   bids : [
-      {
-         id: "P1",
-         src: "",
-         pName: "Belt",
-         lBid: "500",
-         yBid: "600",
-         status: true,
-       }, 
-   ]
-}
-
-
-
 order.php (GET): 
 
 ***request
@@ -493,31 +458,34 @@ auth header jwt
     "responseCode": 200,
     "products": [
         {
-            "id": "P6",
-            "name": "Sofa",
-            "img": "https://images-na.ssl-images-amazon.com/images/I/7173g5rSwAL._SX425_.jpg",
-            "lowestBid": "2500",
-            "category": "Furniture",
-            "location": "Jaipur, Karnataka",
-            "Date": "2021-03-18T00:29:09+00:00"
+            "id": "P64",
+            "name": "Test",
+            "img": "https://res.cloudinary.com/flipin/image/upload/v1619113010/kxadpb0cjfdlu1bif4e1.jpg",
+            "lowestBid": "Not Available",
+            "category": "Accessories",
+            "location": "Jai, Karnataka",
+            "Date": "2021-04-22T23:06:52+00:00",
+            "bidPlaced": false //  will not be given for customer
         },
         {
-            "id": "P5",
-            "name": "Table",
-            "img": "https://www.ikea.com/in/en/images/products/ekedalen-extendable-table-dark-brown__0736963_pe740827_s5.jpg",
-            "lowestBid": "800",
-            "category": "Furniture",
-            "location": "Jaipur, Karnataka",
-            "Date": "2021-03-18T00:28:18+00:00"
+            "id": "P63",
+            "name": "Test",
+            "img": "https://res.cloudinary.com/flipin/image/upload/v1619112837/h89qt8yjrsf9jgw3mtrb.jpg",
+            "lowestBid": "Not Available",
+            "category": "Accessories",
+            "location": "Jai, Karnataka",
+            "Date": "2021-04-22T23:04:15+00:00",
+            "bidPlaced": false
         },
         {
-            "id": "P4",
-            "name": "Chair",
-            "img": "https://ii1.pepperfry.com/media/catalog/product/m/u/568x625/multicolour-patch-iconic-chair-by-star-india-multicolour-patch-iconic-chair-by-star-india-iwybi2.jpg",
-            "lowestBid": "1000",
-            "category": "Furniture",
-            "location": "Jaipur, Karnataka",
-            "Date": "2021-03-18T00:27:32+00:00"
+            "id": "P3",
+            "name": "Tie",
+            "img": "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1559339960-TIE-4836-0026.jpg",
+            "lowestBid": "200",
+            "category": "Accessories",
+            "location": "Jaipuriya, Rajasthan",
+            "Date": "2021-03-18T00:25:31+00:00",
+            "bidPlaced": true
         }
     ]
 }
@@ -543,6 +511,7 @@ auth header jwt
     "location": "Jaipuriya, Rajasthan",
     "personType": "Seller Name",
     "personName": "Yashika",
+    "id": "S1",
     "description": "It is a watch"
 }
 ||
@@ -556,6 +525,7 @@ auth header jwt
     "location": "Jaipuriya, Rajasthan",
     "personType": "Customer Name",
     "personName": "Ayush",
+    "id": "C1",
     "description": "It is a watch"
 }
 ||
