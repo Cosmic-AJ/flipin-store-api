@@ -83,16 +83,6 @@ contact.php (POST):
 // save 201
 // response 200
 
-/* 
-    accessories
-    furniture
-    cosmetics
-    footwear
-    jewellery
-    clothing
-*/
-
-
 order.php (GET): 
 
 ***request
