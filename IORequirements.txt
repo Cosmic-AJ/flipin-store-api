@@ -769,3 +769,8 @@ auth header jwt
     "responseCode": 403,
     "message": "Access denied."
 }
+||
+{
+    "responseCode": 422,
+    "message": "Feedback already submitted."
+}
