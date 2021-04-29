@@ -502,7 +502,8 @@ auth header jwt
     "personName": "Yashika",
     "id": "S1",
     "description": "It is a watch",
-    "deliveryDate": "2021-05-10"
+    "deliveryDate": "2021-05-10",
+    "hasGivenFeedback": false
 }
 ||
 {
@@ -517,7 +518,8 @@ auth header jwt
     "personName": "Ayush",
     "id": "C1",
     "description": "It is a watch",
-    "deliveryDate": "2021-05-10"
+    "deliveryDate": "2021-05-10",
+    "hasGivenFeedback": true
 }
 ||
 {
