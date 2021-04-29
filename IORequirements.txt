@@ -707,16 +707,29 @@ editorder.php (POST):
 ***request:
 auth header jwt
 {
+    //for seller
     "oid":"O1",
-    "status": "STARTED" || "PACKED" || "SHIPPED" || "OUT FOR DELIVERY" || "COMPLETE",
+    "status": "STARTED" || "PACKED" || "SHIPPED" || "OUT FOR DELIVERY" || "DELIVERED",
     "dateDelivery":"2021-05-10"
+}
+||
+{
+    // for customer
+    "oid":"O1"
 }
 
 
 ***response:
 {
+    // for seller
     "responseCode": 204,
     "message": "Order Updated Successfully"
+}
+||
+{
+    //for customer
+    "responseCode": 204,
+    "message": "Order Completed Successfully"
 }
 ||
 {
