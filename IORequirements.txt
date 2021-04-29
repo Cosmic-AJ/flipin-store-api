@@ -741,3 +741,31 @@ auth header jwt
     "responseCode": 403,
     "message": "Access denied."
 }
+
+
+
+feedback.php (POST):
+***request:
+auth header jwt
+{
+    "oid":"O2",
+    "message":"good job",
+    "rating": "4.9"
+}
+
+
+***response:
+{
+    "responseCode": 201,
+    "message": "Feedback Added Successfully"
+}
+||
+{
+    "responseCode": 422,
+    "message": "Order doesn't exist"
+}
+||
+{
+    "responseCode": 403,
+    "message": "Access denied."
+}
