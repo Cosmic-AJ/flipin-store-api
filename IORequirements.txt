@@ -779,7 +779,7 @@ auth header jwt
 
 
 
-dashboard.php (POST):
+dashboard.php (GET):
 ***request:
 auth header jwt
 
