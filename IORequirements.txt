@@ -776,3 +776,104 @@ auth header jwt
     "responseCode": 422,
     "message": "Feedback already submitted."
 }
+
+
+
+dashboard.php (POST):
+***request:
+auth header jwt
+
+***response:
+{
+    // for customer
+    "responseCode": 200,
+    "summary": {
+        "s1": {
+            "key": "Total Product Listing",
+            "value": 14
+        },
+        "s2": {
+            "key": "Total Views",
+            "value": "278"
+        },
+        "s3": {
+            "key": "Ongoing Bids",
+            "value": 4
+        }
+    },
+    "e": "10200",
+    "rating": "5.0",
+    "itemsArray": [
+        {
+            "id": "P6",
+            "src": "https://images-na.ssl-images-amazon.com/images/I/7173g5rSwAL._SX425_.jpg",
+            "pName": "Sofa",
+            "lBid": "2500",
+            "pViews": "5",
+            "tBids": "2",
+            "status": "OPEN"
+        },
+        {
+            "id": "P67",
+            "src": "https://res.cloudinary.com/flipin/image/upload/v1619791374/iejesjpc8zmsc9l8aqxo.jpg",
+            "pName": "Test Val",
+            "lBid": 0,
+            "pViews": "0",
+            "tBids": "0",
+            "status": "UNPUBLISHED"
+        }
+    ]
+}
+||
+{
+    // for seller
+    "responseCode": 200,
+    "src": "https://res.cloudinary.com/flipin/image/upload/v1619792201/qubwyf2lpicrwl0cgvla.png",
+    "summary": {
+        "s1": {
+            "key": "Total Bids",
+            "value": 23
+        },
+        "s2": {
+            "key": "Completed Orders",
+            "value": 5
+        },
+        "s3": {
+            "key": "Ongoing Orders",
+            "value": 3
+        }
+    },
+    "e": "8800",
+    "rating": "4.9",
+    "itemsArray": [
+        {
+            "id": "P64",
+            "src": "https://res.cloudinary.com/flipin/image/upload/v1619113010/kxadpb0cjfdlu1bif4e1.jpg",
+            "pName": "Test",
+            "lBid": "1000",
+            "yBid": "1000",
+            "status": "OPEN"
+        },
+        {
+            "id": "P58",
+            "src": "https://res.cloudinary.com/flipin/image/upload/v1617958648/hh6lz247gypyoosankn7.jpg",
+            "pName": "Jacket",
+            "lBid": "1200",
+            "yBid": "1200",
+            "status": "OPEN"
+        },
+        {
+            "id": "P14",
+            "src": "https://images-na.ssl-images-amazon.com/images/I/71Kooek%2BjaL._UL1500_.jpg",
+            "pName": "Pendant",
+            "lBid": "90000",
+            "yBid": "90000",
+            "status": "UNPUBLISHED"
+        }
+    ]
+}
+||
+{
+    "responseCode": 403,
+    "message": "Access denied."
+}
