@@ -877,3 +877,33 @@ auth header jwt
     "responseCode": 403,
     "message": "Access denied."
 }
+
+
+
+closebid.php (GET):
+***request:
+auth header jwt
+{
+    "pid": "P1"
+}
+
+***response:
+{
+    "responseCode": 204,
+    "message": "Bid Deleted Successfully"
+}
+||
+{
+    "responseCode": 422,
+    "message": "Product or Bid doesn't exist."
+}
+||
+{
+    "responseCode": 422,
+    "message": "Closed Bids can't be deleted."
+}
+||
+{
+    "responseCode": 403,
+    "message": "Access denied."
+}
