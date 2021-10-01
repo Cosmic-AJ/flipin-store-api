@@ -7,3 +7,7 @@ Bugs to be solved:
 jkj
 jkljk
 ll m 
+
+
+
+.nik,
