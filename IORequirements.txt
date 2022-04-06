@@ -1,5 +1,5 @@
 login.php (POST): 
-***request:j
+***request:
    {
       email: string,
       password: string 
