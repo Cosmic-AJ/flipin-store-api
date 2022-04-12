@@ -1,5 +1,5 @@
 login.php (POST): 
-***request:egg
+***request:eg
    {
       email: string,
       password: string 
