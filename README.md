@@ -1,3 +1,3 @@
 Bugs to be solved:
 
-1. Refresh the Sign-Up 
+1. Refresh the Sign-U
