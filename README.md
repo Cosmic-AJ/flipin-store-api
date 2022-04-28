@@ -1,3 +1,3 @@
 Bugs to be solved:
 
-1. Refresh the Sign-
+1. Refresh the Sig
