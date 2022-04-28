@@ -1,3 +1,3 @@
 Bugs to be solved:
 
-1. Refresh the
+1. Refresh t
