@@ -1,3 +1,3 @@
 Bugs to be solved:
 
-1. Refresh the S
+1. Refresh the
