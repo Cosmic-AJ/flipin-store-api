@@ -1,2 +1,1 @@
-Bugs to be solved:
-
+Bugs to be solved
