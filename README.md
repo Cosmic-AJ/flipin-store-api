@@ -1,3 +1,3 @@
 Bugs to be solved:
 
-1. R
+1.
