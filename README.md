@@ -1,1 +1,1 @@
-Bugs to be solve
+Bugs to be so
