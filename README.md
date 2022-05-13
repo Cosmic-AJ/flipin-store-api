@@ -1,3 +1,3 @@
 B
 C
-Gdje
+Gd
