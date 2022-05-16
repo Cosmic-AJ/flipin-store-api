@@ -1,4 +1,3 @@
 B
-C
 G
 Gbdjshnsjsnsn
