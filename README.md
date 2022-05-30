@@ -1,4 +1,4 @@
 B
 G
 Findhdjdndjd
-Ud dunu
+Ud du
