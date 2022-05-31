@@ -1,3 +1,3 @@
 B
 G
-Find
+Fin
