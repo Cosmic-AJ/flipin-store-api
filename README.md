@@ -2,4 +2,4 @@ B
 G
 Fin
 H
-Vznj
+Vzn
